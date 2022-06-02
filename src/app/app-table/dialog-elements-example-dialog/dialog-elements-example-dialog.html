@@ -1,0 +1,221 @@
+<article>
+    <div *ngIf="_data.message=='update'">
+      
+        <h3>Update Car Information</h3>
+    
+      <!-- <img mat-card-image [src]="formData.image" alt=""> -->
+      <div  class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label>Manufacturer  </mat-label>
+              <input 
+              [(ngModel)]="formData.manufacturer"
+                matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Model</mat-label>
+              <input [(ngModel)]="formData.model"  matInput>
+            </mat-form-field>
+      </div>
+  
+  
+      <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label> Year</mat-label>
+              <input [(ngModel)]="formData.year"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>VinCode</mat-label>
+              <input [(ngModel)]="formData.VinCode"  matInput>
+            </mat-form-field>
+      </div>
+  
+      
+      <div class="inline-groups">
+        <mat-form-field appearance="fill">
+            <mat-label> Price </mat-label>
+            <input  [(ngModel)]="formData.price" matInput>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Mile</mat-label>
+            <input  [(ngModel)]="formData.mile" matInput>
+          </mat-form-field>
+    </div>
+  
+  
+      <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label>Seller Phone Number</mat-label>
+              <input [(ngModel)]="formData.phoneNumber"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Image Url</mat-label>
+              <input [(ngModel)]="formData.image"  matInput>
+            </mat-form-field>
+      </div>
+  
+      
+      
+       <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label>Drive Train Geo</mat-label>
+              <input [(ngModel)]="formData.driveTrainGeo"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Drive Train Eng</mat-label>
+              <input [(ngModel)]="formData.driveTrainEng"   matInput>
+            </mat-form-field>
+      </div>
+  
+  
+     <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label> Fuel Type Geo</mat-label>
+              <input [(ngModel)]="formData.fuelTypeGeo"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label> Fuel Type Eng</mat-label>
+              <input [(ngModel)]="formData.fuelTypeEng" matInput>
+            </mat-form-field>
+      </div>
+  
+  
+      <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label> Transmission Geo</mat-label>
+              <input [(ngModel)]="formData.transmissionGeo"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Transmission Eng</mat-label>
+              <input  [(ngModel)]="formData.transmissionEng" matInput>
+            </mat-form-field>
+      </div>
+  
+      <div style=" display: flex!important;
+      flex-direction: row!important;
+      justify-content: space-around!important;">
+      
+        <button (click)="updateCompanyService()" class="col-md-5" mat-raised-button color="primary">Save</button>
+
+        <button style="height: 35px!important; " mat-raised-button color="warn" mat-dialog-close class="col-md-5">Cancel</button>
+         
+      </div>
+      </div>
+   
+  
+  
+  
+    <div *ngIf="_data.message=='create'">  
+  
+      <h1>All New Car</h1>
+      <div  class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label>Manufacturer  </mat-label>
+              <input [(ngModel)]="cars.manufacturer"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Model</mat-label>
+              <input [(ngModel)]="cars.model"  matInput>
+            </mat-form-field>
+      </div>
+  
+  
+      <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label> Year</mat-label>
+              <input [(ngModel)]="cars.year" matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>VinCode</mat-label>
+              <input [(ngModel)]="cars.VinCode"  matInput>
+            </mat-form-field>
+      </div>
+  
+      
+      <div class="inline-groups">
+        <mat-form-field appearance="fill">
+            <mat-label> Price </mat-label>
+            <input [(ngModel)]="cars.price"  matInput>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Mile</mat-label>
+            <input [(ngModel)]="cars.mile" matInput>
+          </mat-form-field>
+    </div>
+  
+  
+      <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label>Seller Phone Number</mat-label>
+              <input [(ngModel)]="cars.phoneNumber"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Image Url</mat-label>
+              <input [(ngModel)]="cars.image" matInput>
+            </mat-form-field>
+  
+      </div>
+  
+  
+       <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label>Drive Train Geo</mat-label>
+              <input [(ngModel)]="cars.driveTrainGeo"matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Drive Train Eng</mat-label>
+              <input [(ngModel)]="cars.driveTrainEng"   matInput>
+            </mat-form-field>
+      </div>
+  
+  
+     <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label> Fuel Type Geo</mat-label>
+              <input [(ngModel)]="cars.fuelTypeGeo"  matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label> Fuel Type Eng</mat-label>
+              <input [(ngModel)]="cars.fuelTypeEng"  matInput>
+            </mat-form-field>
+      </div>
+  
+  
+      <div class="inline-groups">
+          <mat-form-field appearance="fill">
+              <mat-label> Transmission Geo</mat-label>
+              <input [(ngModel)]="cars.transmissionGeo" matInput>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Transmission Eng</mat-label>
+              <input [(ngModel)]="cars.transmissionEng"  matInput>
+            </mat-form-field>
+      </div>
+    
+      <div  style=" display: flex!important;
+      flex-direction: row!important;
+      justify-content: space-around!important;">
+        
+        <button class=" col-md-5" (click)="onCreateBtnClick()" mat-raised-button color="primary">Add</button> 
+       
+        <button style="height: 35px!important; " mat-raised-button color="warn" mat-dialog-close class="col-md-5">Cancel</button> 
+         
+      </div>
+    </div>
+
+  </article>
+  
+  
